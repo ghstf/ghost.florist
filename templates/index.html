@@ -54,7 +54,7 @@
     {% if config.extra.projects %}
     <div class="project-list">
       {% for item in config.extra.projects %}
-        <article class="project-item"><span class="target-mark" aria-hidden="true">⌖</span><div><h3>{% if item.url %}<a href="{{ item.url }}">{{ item.title }}</a>{% else %}{{ item.title }}{% endif %}</h3><p>{{ item.description }}</p></div></article>
+        <article class="project-item"><div><h3>{% if item.url %}<a href="{{ item.url }}">{{ item.title }}</a>{% else %}{{ item.title }}{% endif %}</h3><p>{{ item.description }}</p></div></article>
       {% endfor %}
     </div>
     {% else %}

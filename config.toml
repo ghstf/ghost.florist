@@ -6,7 +6,11 @@ build_search_index = false
 
 [extra]
 intro = "I make things, mostly on computers."
-projects = []
+
+[[extra.projects]]
+title = "Hush"
+description = "A quiet place for two; experimental messaging without identity."
+url = "https://github.com/ghstf/hush"
 
 [[extra.links]]
 name = "github"
