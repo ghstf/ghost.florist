@@ -1,6 +1,6 @@
 +++
 title = "DRIFT."
-description = "A ritual for sleep."
+description = "A sinking before sleep."
 date = 2026-09-16
 +++
 
