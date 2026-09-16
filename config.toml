@@ -1,0 +1,26 @@
+base_url = "https://ghost.florist"
+title = "ghost.florist"
+description = "I makes things, mostly on computers."
+compile_sass = false
+build_search_index = false
+
+[extra]
+name = "dani"
+intro = "I make things, mostly on computers."
+projects = []
+
+[[extra.links]]
+name = "github"
+url = "https://github.com/ghstf"
+
+[[extra.links]]
+name = "literal.club"
+url = "https://literal.club/ghstf"
+
+[[extra.links]]
+name = "record.club"
+url = "https://record.club/ghstf"
+
+[[extra.links]]
+name = "email"
+url = "mailto:dear@ghost.florist"

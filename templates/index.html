@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <section class="intro" aria-labelledby="intro-title">
+    <h1 id="intro-title">{{ config.extra.name }}</h1>
+    <p class="intro-copy">{{ config.extra.intro }}</p>
+  </section>
+
+  <section class="home-section writing-section" aria-labelledby="writing-heading">
+    <div class="section-topline">
+      <div class="section-heading"><h2 id="writing-heading">writing</h2><span class="heading-rule" aria-hidden="true"></span></div>
+      <a class="section-more" href="{{ get_url(path='/writing/') }}"><span class="target-mark" aria-hidden="true">⌖</span> all writing</a>
+    </div>
+    {% set writing = get_section(path="writing/_index.md") %}
+    {% if writing.pages %}
+    <div class="dated-list">
+      {% for item in writing.pages %}
+        {% if loop.index <= 5 %}
+        <article class="dated-item">
+          <time datetime="{{ item.date }}">{{ item.date | date(format="%Y.%m.%d") }}</time>
+          <div><h3><a href="{{ item.permalink }}">{{ item.title }}</a></h3>{% if item.description %}<p>{{ item.description }}</p>{% endif %}</div>
+        </article>
+        {% endif %}
+      {% endfor %}
+    </div>
+    {% else %}
+    <p class="empty-state">No writing yet. Check back soon.</p>
+    {% endif %}
+  </section>
+
+  <section class="home-section things-section" aria-labelledby="things-heading">
+    <div class="section-heading"><h2 id="things-heading">things</h2><span class="heading-rule" aria-hidden="true"></span></div>
+    {% if config.extra.projects %}
+    <div class="project-list">
+      {% for item in config.extra.projects %}
+        <article class="project-item"><span class="target-mark" aria-hidden="true">⌖</span><div><h3>{% if item.url %}<a href="{{ item.url }}">{{ item.title }}</a>{% else %}{{ item.title }}{% endif %}</h3><p>{{ item.description }}</p></div></article>
+      {% endfor %}
+    </div>
+    {% else %}
+    <p class="empty-state">No projects yet. Check back soon.</p>
+    {% endif %}
+  </section>
+
+  <section class="home-section elsewhere-section" aria-labelledby="elsewhere-heading">
+    <div class="section-heading"><h2 id="elsewhere-heading">elsewhere</h2><span class="heading-rule" aria-hidden="true"></span></div>
+    <ul class="elsewhere-links">
+      {% for link in config.extra.links %}
+        <li><a href="{{ link.url }}"><span class="target-mark" aria-hidden="true">⌖</span> {{ link.name }}</a></li>
+      {% endfor %}
+    </ul>
+  </section>
+{% endblock content %}

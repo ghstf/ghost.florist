@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}{{ page.title }} · {{ config.title }}{% endblock title %}
+{% block content %}
+  <article class="post">
+    <a class="back-link" href="{{ get_url(path='/writing/') }}">← all writing</a>
+    <header class="post-header">
+      <time datetime="{{ page.date }}">{{ page.date | date(format="%Y.%m.%d") }}</time>
+      <h1>{{ page.title }}</h1>
+      {% if page.description %}<p>{{ page.description }}</p>{% endif %}
+    </header>
+    <div class="post-content">{{ page.content | safe }}</div>
+  </article>
+{% endblock content %}
