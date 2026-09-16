@@ -26,5 +26,9 @@ name = "record.club"
 url = "https://record.club/ghstf"
 
 [[extra.links]]
+name = "mastodon"
+url = "https://mastodon.social/@ghstf"
+
+[[extra.links]]
 name = "email"
 url = "mailto:dear@ghost.florist"
