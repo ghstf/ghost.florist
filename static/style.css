@@ -79,7 +79,6 @@ a:focus-visible { outline: 1px solid var(--ink); outline-offset: 4px; }
 .post-content img { max-width: 100%; height: auto; }
 .post-content a { text-decoration: underline; text-underline-offset: 0.16em; }
 
-/* Rituals use short, deliberate steps rather than regular article paragraphs. */
 .post-content .ritual { font-size: 18px; line-height: 1.42; letter-spacing: 0.01em; }
 .post-content .ritual section { margin: 0 0 2.05em; }
 .post-content .ritual section:last-child { margin-bottom: 0; }
