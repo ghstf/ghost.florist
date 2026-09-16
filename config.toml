@@ -5,7 +5,6 @@ compile_sass = false
 build_search_index = false
 
 [extra]
-name = "dani"
 intro = "I make things, mostly on computers."
 projects = []
 
