@@ -6,7 +6,18 @@
     {% if section.pages %}
     <div class="dated-list">
       {% for item in section.pages %}
-        <article class="dated-item"><time datetime="{{ item.date }}">{{ item.date | date(format="%Y.%m.%d") }}</time><div><h2><a href="{{ item.permalink }}">{{ item.title }}</a></h2>{% if item.description %}<p>{{ item.description }}</p>{% endif %}</div></article>
+        <article class="dated-item">
+          <time datetime="{{ item.date }}">{{ item.date | date(format="%Y.%m.%d") }}</time>
+          <div>
+            <div class="writing-entry-heading">
+              <h2><a href="{{ item.permalink }}">{{ item.title }}</a></h2>
+              {% if item.taxonomies.categories %}
+                <span class="dated-categories">{% for category in item.taxonomies.categories %}<a href="{{ get_taxonomy_url(kind="categories", term=category) }}"><span class="target-mark" aria-hidden="true">◇</span> {{ category }}</a>{% if not loop.last %}, {% endif %}{% endfor %}</span>
+              {% endif %}
+            </div>
+            {% if item.description %}<p>{{ item.description }}</p>{% endif %}
+          </div>
+        </article>
       {% endfor %}
     </div>
     {% else %}
