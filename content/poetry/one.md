@@ -1,9 +1,5 @@
 +++
-title = "DECAY."
 date = 2026-09-16
-
-[taxonomies]
-categories = ["poetry"]
 +++
 
 <div class="poem">

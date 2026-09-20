@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %}poetry · {{ config.title }}{% endblock title %}
+{% block content %}
+  <section class="interior-page">
+    <div class="section-heading"><h1>poetry</h1><span class="heading-rule" aria-hidden="true"></span></div>
+    {% if section.pages %}
+    <div class="dated-list">
+      {% set total = section.pages | length %}
+      {% for item in section.pages %}
+        <article class="dated-item">
+          <time datetime="{{ item.date }}">{{ item.date | date(format="%Y.%m.%d") }}</time>
+          <div>
+            <h2><a href="{{ item.permalink }}">Untitled #{{ total - loop.index + 1 }}</a></h2>
+            {% if item.description %}<p>{{ item.description }}</p>{% endif %}
+          </div>
+        </article>
+      {% endfor %}
+    </div>
+    {% else %}
+    <p class="empty-state">No poems yet. Check back soon.</p>
+    {% endif %}
+  </section>
+{% endblock content %}

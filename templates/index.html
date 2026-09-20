@@ -5,25 +5,21 @@
     <p class="intro-copy">{{ config.extra.intro }}</p>
   </section>
 
-  <section class="home-section writing-section" aria-labelledby="writing-heading">
+  <section class="home-section poetry-section" aria-labelledby="poetry-heading">
     <div class="section-topline">
-      <div class="section-heading"><h2 id="writing-heading">writing</h2><span class="heading-rule" aria-hidden="true"></span></div>
-      <a class="section-more" href="{{ get_url(path='/writing/') }}"><span class="target-mark" aria-hidden="true">⌖</span> all writing</a>
+      <div class="section-heading"><h2 id="poetry-heading">poetry</h2><span class="heading-rule" aria-hidden="true"></span></div>
+      <a class="section-more" href="{{ get_url(path='/poetry/') }}"><span class="target-mark" aria-hidden="true">⌖</span> all poetry</a>
     </div>
-    {% set writing = get_section(path="writing/_index.md") %}
-    {% if writing.pages %}
+    {% set poetry = get_section(path="poetry/_index.md") %}
+    {% if poetry.pages %}
     <div class="dated-list">
-      {% for item in writing.pages %}
+      {% set total = poetry.pages | length %}
+      {% for item in poetry.pages %}
         {% if loop.index <= 5 %}
         <article class="dated-item">
           <time datetime="{{ item.date }}">{{ item.date | date(format="%Y.%m.%d") }}</time>
           <div>
-            <div class="writing-entry-heading">
-              <h3><a href="{{ item.permalink }}">{{ item.title }}</a></h3>
-              {% if item.taxonomies.categories %}
-                <span class="dated-categories">{% for category in item.taxonomies.categories %}<a href="{{ get_taxonomy_url(kind="categories", term=category) }}"><span class="target-mark" aria-hidden="true">◇</span> {{ category }}</a>{% if not loop.last %}, {% endif %}{% endfor %}</span>
-              {% endif %}
-            </div>
+            <h3><a href="{{ item.permalink }}">Untitled #{{ total - loop.index + 1 }}</a></h3>
             {% if item.description %}<p>{{ item.description }}</p>{% endif %}
           </div>
         </article>
@@ -31,7 +27,7 @@
       {% endfor %}
     </div>
     {% else %}
-    <p class="empty-state">No writing yet. Check back soon.</p>
+    <p class="empty-state">No poems yet. Check back soon.</p>
     {% endif %}
   </section>
 

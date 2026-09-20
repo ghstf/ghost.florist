@@ -3,7 +3,6 @@ title = "ghost.florist"
 description = "I makes things, mostly on computers."
 compile_sass = false
 build_search_index = false
-taxonomies = [{ name = "categories" }]
 
 [extra]
 intro = "I make things, mostly on computers."

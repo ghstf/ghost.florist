@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title -%}
+  {%- set section = get_section(path="poetry/_index.md") -%}
+  {%- set total = section.pages | length -%}
+  {%- set_global number = 0 -%}
+  {%- for item in section.pages -%}
+    {%- if item.permalink == page.permalink -%}
+      {%- set_global number = total - loop.index + 1 -%}
+    {%- endif -%}
+  {%- endfor -%}
+  Untitled #{{ number }} · {{ config.title }}
+{%- endblock title %}
+{% block content %}
+  <article class="post">
+    <header class="post-header">
+      <time datetime="{{ page.date }}">{{ page.date | date(format="%Y.%m.%d") }}</time>
+      <h1>Untitled #{{ number }}</h1>
+      {% if page.description %}<p>{{ page.description }}</p>{% endif %}
+    </header>
+    <div class="post-content">{{ page.content | safe }}</div>
+  </article>
+{% endblock content %}
