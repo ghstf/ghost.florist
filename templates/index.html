@@ -1,9 +1,10 @@
 {% extends "base.html" %}
 
 {% block content %}
-  <section class="intro" aria-labelledby="intro-title">
-    <p class="intro-copy">{{ config.extra.intro }}</p>
-  </section>
+  <blockquote class="quote">
+    <p class="quote-body">{{ config.extra.quote.body }}</p>
+    <footer class="quote-from">— <cite>{{ config.extra.quote.from }}</cite></footer>
+  </blockquote>
 
   <section class="home-section poetry-section" aria-labelledby="poetry-heading">
     <div class="section-topline">

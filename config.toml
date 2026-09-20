@@ -4,8 +4,9 @@ description = "I makes things, mostly on computers."
 compile_sass = false
 build_search_index = false
 
-[extra]
-intro = "I make things, mostly on computers."
+[extra.quote]
+body = "We build our legacy piece by piece and maybe the whole world will remember you or maybe just a couple of people, but you do what you can to make sure you're still around after you're gone."
+from = "A Ghost Story"
 
 [[extra.projects]]
 title = "Hush"

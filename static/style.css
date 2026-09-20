@@ -30,9 +30,10 @@ a:focus-visible { outline: 1px solid var(--ink); outline-offset: 4px; }
 .site-title { display: inline-block; color: var(--ink); font-size: clamp(42px, 6vw, 63px); letter-spacing: 0.018em; line-height: 1; white-space: nowrap; }
 .site-title:hover { text-decoration: none; }
 
-.intro { margin-top: 59px; }
-.intro h1 { margin: 0; color: var(--ink); font-size: 20px; font-weight: 400; line-height: 1.1; }
-.intro-copy { margin: 24px 0 0; color: var(--ink); font-style: italic; font-size: 16px; line-height: 1.55; letter-spacing: 0.105em; }
+.quote { margin: 59px 0 0; padding-left: 1.05em; border-left: 1px solid var(--rule); }
+.quote-body { margin: 0; color: var(--ink); font-style: italic; font-size: 19px; line-height: 1.55; letter-spacing: 0.02em; }
+.quote-from { margin: 16px 0 0; font-style: normal; }
+.quote-from cite { color: var(--muted); font-style: normal; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; }
 
 .home-section { margin-top: 76px; }
 .section-heading { display: flex; align-items: center; gap: 16px; min-width: 0; }
@@ -96,8 +97,8 @@ a:focus-visible { outline: 1px solid var(--ink); outline-offset: 4px; }
   .site-shell { width: min(100% - 40px, 500px); }
   .site-header { padding-top: 38px; }
   .site-title { font-size: clamp(42px, 11vw, 61px); }
-  .intro { margin-top: 63px; }
-  .intro-copy { font-size: 15px; }
+  .quote { margin-top: 45px; padding-left: 0.85em; }
+  .quote-body { font-size: 17px; }
   .home-section { margin-top: 55px; }
   .section-topline { gap: 16px; }
   .section-more { font-size: 12px; }
