@@ -32,28 +32,6 @@
     {% endif %}
   </section>
 
-  <section class="home-section rituals-section" aria-labelledby="rituals-heading">
-    <div class="section-topline">
-      <div class="section-heading"><h2 id="rituals-heading">rituals</h2><span class="heading-rule" aria-hidden="true"></span></div>
-      <a class="section-more" href="{{ get_url(path='/rituals/') }}"><span class="target-mark" aria-hidden="true">⌖</span> all rituals</a>
-    </div>
-    {% set rituals = get_section(path="rituals/_index.md") %}
-    {% if rituals.pages %}
-    <div class="dated-list">
-      {% for item in rituals.pages %}
-        {% if loop.index <= 5 %}
-        <article class="dated-item">
-          <time datetime="{{ item.date }}">{{ item.date | date(format="%Y.%m.%d") }}</time>
-          <div><h3><a href="{{ item.permalink }}">{{ item.title }}</a></h3>{% if item.description %}<p>{{ item.description }}</p>{% endif %}</div>
-        </article>
-        {% endif %}
-      {% endfor %}
-    </div>
-    {% else %}
-    <p class="empty-state">No rituals yet. Check back soon.</p>
-    {% endif %}
-  </section>
-
   <section class="home-section things-section" aria-labelledby="things-heading">
     <div class="section-heading"><h2 id="things-heading">things</h2><span class="heading-rule" aria-hidden="true"></span></div>
     {% if config.extra.projects %}

@@ -80,13 +80,6 @@ a:focus-visible { outline: 1px solid var(--ink); outline-offset: 4px; }
 .post-content img { max-width: 100%; height: auto; }
 .post-content a { text-decoration: underline; text-underline-offset: 0.16em; }
 
-.post-content .ritual { font-size: 18px; line-height: 1.42; letter-spacing: 0.01em; }
-.post-content .ritual section { margin: 0 0 2.05em; }
-.post-content .ritual section:last-child { margin-bottom: 0; }
-.post-content .ritual p { margin: 0; }
-.post-content .ritual .indent { padding-left: 0.75em; }
-.post-content .ritual strong { color: var(--ink); font-weight: 500; letter-spacing: 0.035em; text-decoration: underline; text-decoration-color: #b5b5b5; text-decoration-thickness: 1px; text-underline-offset: 0.16em; }
-
 .post-content .poem { font-size: 18px; line-height: 1.42; letter-spacing: 0.01em; }
 .post-content .poem section { margin: 0 0 2.05em; }
 .post-content .poem section:last-child { margin-bottom: 0; }
