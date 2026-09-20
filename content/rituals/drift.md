@@ -37,8 +37,4 @@ date = 2026-09-16
     <p>You will find it:</p>
     <p class="indent">The image at the end of the weight.</p>
   </section>
-
-  <section>
-    <p>What does it mean to you?</p>
-  </section>
 </div>
