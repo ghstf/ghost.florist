@@ -9,6 +9,11 @@ body = "We build our legacy piece by piece and maybe the whole world will rememb
 from = "A Ghost Story"
 
 [[extra.projects]]
+title = "Feron ID"
+description = "Open infrastructure for digital identity."
+url = "https://github.com/feron-id"
+
+[[extra.projects]]
 title = "Hush"
 description = "A quiet place for two; experimental messaging without identity."
 url = "https://github.com/ghstf/hush"
