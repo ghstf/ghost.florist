@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block title %}{{ page.title }} · {{ config.title }}{% endblock title %}
+{% block content %}
+  <article class="interior-page consulting-page">
+    <div class="section-heading"><h1>consulting</h1><span class="heading-rule" aria-hidden="true"></span></div>
+
+    <div class="consulting-intro">
+      <p class="consulting-lead">I help teams design and build digital credential systems using open standards.</p>
+      <p>Wallets, issuers, verifiers, and interoperability.</p>
+    </div>
+
+    <section class="consulting-section" aria-labelledby="about-heading">
+      <div class="section-heading"><h2 id="about-heading">about me</h2><span class="heading-rule" aria-hidden="true"></span></div>
+      <p>I'm a software engineer specializing in digital identity. I've designed identity architecture and built production credential infrastructure, including wallet technology.</p>
+      <p>As part of a vendor team, I worked on credential issuance and verification for the State of Utah's <a href="https://dts.utah.gov/what-we-are-doing/our-initiatives/verifiable-digital-credentials/">verifiable digital credentials initiative</a>.</p>
+      <p>My work spans standards and implementation: I can help choose a sound approach, build it, and trace what went wrong when an issuer, wallet, and verifier don't agree. You can see some of my open work at <a href="https://github.com/feron-id">Feron ID</a>.</p>
+    </section>
+
+    <section class="consulting-section" aria-labelledby="work-heading">
+      <div class="section-heading"><h2 id="work-heading">ways to work together</h2><span class="heading-rule" aria-hidden="true"></span></div>
+      <div class="consulting-list">
+        <div class="consulting-item">
+          <h3>Architecture review <span>· $750</span></h3>
+          <p>A focused review of your credential system, with a technical working session and written recommendations.</p>
+        </div>
+        <div class="consulting-item">
+          <h3>Proof of concept <span>· from $3,000</span></h3>
+          <p>Working code to answer a specific product or integration question, plus documentation and a walkthrough.</p>
+        </div>
+        <div class="consulting-item">
+          <h3>Engineering &amp; integration</h3>
+          <p>Hands-on help building wallet, issuer, and verifier flows or debugging interoperability across implementations.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="consulting-section" aria-labelledby="focus-heading">
+      <div class="section-heading"><h2 id="focus-heading">focus</h2><span class="heading-rule" aria-hidden="true"></span></div>
+      <p>OpenID4VCI, OpenID4VP, W3C Verifiable Credentials, the Digital Credentials API, OAuth/OIDC, and wallet architecture. I care about privacy and systems that work beyond a single vendor.</p>
+    </section>
+
+    <section class="consulting-section consulting-contact" aria-labelledby="contact-heading">
+      <div class="section-heading"><h2 id="contact-heading">get in touch</h2><span class="heading-rule" aria-hidden="true"></span></div>
+      <p>Tell me what you're building and where you're stuck. <a href="mailto:dear@ghost.florist">Email me <span aria-hidden="true">↗</span></a></p>
+    </section>
+  </article>
+{% endblock content %}

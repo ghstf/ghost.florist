@@ -52,8 +52,8 @@ a:focus-visible { outline: 1px solid var(--ink); outline-offset: 4px; }
 .dated-item p, .project-item p { margin: 2px 0 0; color: var(--ink); font-size: 15px; font-style: italic; line-height: 1.3; letter-spacing: 0.105em; }
 
 .empty-state { margin: 21px 0 0 62px; color: var(--muted); font-size: 15px; font-style: italic; letter-spacing: 0.06em; }
-.things-section { margin-top: 79px; }
-.things-section .heading-rule { width: 89px; }
+.projects-section { margin-top: 79px; }
+.projects-section .heading-rule { width: 89px; }
 .project-list { margin: 19px 0 0 35px; }
 .project-item { display: flex; align-items: flex-start; gap: 11px; margin-bottom: 15px; }
 .project-item > .target-mark { width: 16px; flex: 0 0 16px; padding-top: 2px; }
@@ -61,6 +61,24 @@ a:focus-visible { outline: 1px solid var(--ink); outline-offset: 4px; }
 .elsewhere-section .heading-rule { width: 117px; }
 .elsewhere-links { display: flex; flex-wrap: wrap; column-gap: 31px; row-gap: 6px; margin: 15px 0 0; color: var(--ink); font-size: 15px; letter-spacing: 0.08em; }
 .elsewhere-links .target-mark { margin-right: 4px; }
+
+.consulting-home-section { margin-top: 73px; }
+.consulting-home-section p { max-width: 590px; margin: 18px 0 0 35px; line-height: 1.5; }
+.consulting-home-section a, .consulting-contact a { text-decoration: underline; text-underline-offset: 0.17em; }
+
+.consulting-page { max-width: 650px; }
+.consulting-intro { margin-top: 35px; }
+.consulting-intro p, .consulting-section > p { margin: 0 0 15px; font-size: 17px; line-height: 1.55; letter-spacing: 0.035em; }
+.consulting-intro .consulting-lead { color: var(--ink); font-size: 22px; line-height: 1.35; letter-spacing: 0.015em; }
+.consulting-section { margin-top: 56px; }
+.consulting-list { margin: 24px 0 0 35px; }
+.consulting-item { margin-bottom: 24px; }
+.consulting-item h3 { margin: 0; color: var(--ink); font-size: 17px; font-weight: 400; letter-spacing: 0.05em; }
+.consulting-item h3 span { color: var(--muted); font-size: 14px; white-space: nowrap; }
+.consulting-item p { max-width: 550px; margin: 5px 0 0; line-height: 1.5; letter-spacing: 0.04em; }
+.consulting-section > p { margin: 21px 0 0 35px; }
+.consulting-section > p + p { margin-top: 13px; }
+.consulting-section > p a { text-decoration: underline; text-underline-offset: 0.17em; }
 
 .interior-page { margin-top: 84px; }
 .interior-page > .dated-list { margin-top: 36px; }
@@ -100,6 +118,8 @@ a:focus-visible { outline: 1px solid var(--ink); outline-offset: 4px; }
   .dated-item h2, .dated-item h3, .project-item h2, .project-item h3 { font-size: 15px; }
   .dated-item p, .project-item p { font-size: 14px; }
   .elsewhere-links { column-gap: 20px; }
+  .consulting-home-section p, .consulting-list, .consulting-section > p { margin-left: 0; }
+  .consulting-intro .consulting-lead { font-size: 20px; }
   .interior-page, .post { margin-top: 72px; }
   .post-content { font-size: 18px; }
 }
