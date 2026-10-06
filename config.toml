@@ -9,6 +9,12 @@ body = "We build our legacy piece by piece and maybe the whole world will rememb
 from = "A Ghost Story"
 
 [[extra.projects]]
+title = "Waysider"
+bold = true
+description = "I'm the founder of Waysider. We make simple software for people that make software."
+url = "https://waysider.space/"
+
+[[extra.projects]]
 title = "Feron ID"
 description = "Open infrastructure for digital identity."
 url = "https://github.com/feron-id"
