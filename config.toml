@@ -11,7 +11,7 @@ from = "A Ghost Story"
 [[extra.projects]]
 title = "Waysider"
 bold = true
-description = "I'm the founder of Waysider. We make simple software for people that make software."
+description = "I'm the founder of Waysider: simple software for people that make software."
 url = "https://waysider.space/"
 
 [[extra.projects]]
